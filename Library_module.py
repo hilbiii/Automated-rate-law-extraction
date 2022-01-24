@@ -464,7 +464,7 @@ def Build_Initial_Rate(Stoich, Tags):
 def Exp_and_Theoretical(Stoich, yA, yB, pressure, Exp_rate, Tables, R_names, P_names, Swap = False):
     """
     Selects the best theoretical curve from each initial rate equation, 
-    creates the text strigs yo appear in the output and prepares the 
+    creates the text strigs to appear in the output and prepares the 
     information to create the graphical output.
 
     Parameters
@@ -591,7 +591,7 @@ def Exp_and_Theoretical(Stoich, yA, yB, pressure, Exp_rate, Tables, R_names, P_n
             
             text += "\n" + "B = {}".format(R_names[1])
         
-        text += "\n\n" + "Specific constants of this theoretical curve (Units coincide with pressure and rate units):"
+        text += "\n\n" + "Specific constants of this simulated dataset (Units coincide with pressure and rate units):"
         
         text += "\n\n" + "k' = {:.3e}".format(k)
         
@@ -627,7 +627,7 @@ def Exp_and_Theoretical(Stoich, yA, yB, pressure, Exp_rate, Tables, R_names, P_n
             
             text += "\n" + "Kg = {:.3e}".format(Kg)
         
-        text += "\n\n" + "Matching criteria:"
+        text += "\n\n" + "Ranking criteria:"
         
         text += "\n\n" + "SRE = {:.3e}".format(SRE)
         
@@ -699,7 +699,7 @@ def Create_output(Final_table, Text_list, Tags_list, Theor_press, pressure, Exp_
         
         plt.plot(pressure, Exp_rate, 'ro', label='Experimental') # plotting the experimental datapoints
         
-        plt.plot(Theor_press, Theor_rate, color='tab:blue', label='Theoretical')
+        plt.plot(Theor_press, Theor_rate, color='tab:blue', label='Simulated')
         
         plt.legend()
         
